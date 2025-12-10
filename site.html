@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Училищен вестник - Йордан Йовков</title>
+
+    <style>
+        /* -------------------------
+           ГЛОБАЛНИ СТИЛОВЕ
+        ------------------------- */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f6fb;
+            color: #333;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* Основни цветове */
+        :root {
+            --blue: #3b6ef5;
+            --purple: #7b3ff2;
+            --gradient: linear-gradient(135deg, var(--blue), var(--purple));
+        }
+
+        /* -------------------------
+           ХЕДЪР И НАВИГАЦИЯ
+        ------------------------- */
+        header {
+            background: var(--gradient);
+            padding: 20px 40px;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            opacity: 0.7;
+        }
+
+        /* -------------------------
+           HERO СЕКЦИЯ
+        ------------------------- */
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+            background: var(--gradient);
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* -------------------------
+           ПОСЛЕДНИ СТАТИИ
+        ------------------------- */
+        .articles {
+            padding: 60px 40px;
+        }
+
+        .articles h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--purple);
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .article-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--blue);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .article-card h4 {
+            margin-top: 0;
+            color: var(--blue);
+        }
+
+        /* -------------------------
+           ЗА ЕКИПА
+        ------------------------- */
+        .team {
+            padding: 60px 40px;
+            background: #eee8ff;
+        }
+
+        .team h3 {
+            font-size: 28px;
+            color: var(--purple);
+            margin-bottom: 20px;
+        }
+
+        .team p {
+            max-width: 800px;
+            line-height: 1.7;
+        }
+
+        /* -------------------------
+           ФУТЪР
+        ------------------------- */
+        footer {
+            background: #2c2c2c;
+            color: white;
+            padding: 30px 40px;
+            margin-top: 40px;
+        }
+
+        footer h4 {
+            margin-top: 0;
+            font-size: 20px;
+            color: var(--blue);
+        }
+
+        footer p {
+            margin: 3px 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====================================
+         ХЕДЪР + МЕНЮ
+    ==================================== -->
+    <header>
+        <h1>Училищен вестник - Йордан Йовков</h1>
+        <nav>
+            <ul>
+                <li>Начало</li>
+                <li>Новини</li>
+                <li>Интервюта</li>
+                <li>Галерия</li>
+                <li>За нас</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ====================================
+         HERO СЕКЦИЯ
+    ==================================== -->
+    <section class="hero">
+        <h2>Гласът на учениците – новини, идеи и вдъхновение</h2>
+    </section>
+
+    <!-- ====================================
+         ПОСЛЕДНИ СТАТИИ
+    ==================================== -->
+    <section class="articles">
+        <h3>Последни статии</h3>
+
+        <div class="article-grid">
+            <!-- Статия 1 -->
+            <div class="article-card">
+                <h4>Откриване на STEM център</h4>
+                <p>
+                    В училището бе открит нов модерен STEM център, който ще даде възможност 
+                    на учениците да развиват умения в областта на науката, технологиите, 
+                    инженерството и математиката.
+                </p>
+            </div>
+
+            <!-- Статия 2 -->
+            <div class="article-card">
+                <h4>Участие в Европейската седмица на програмирането</h4>
+                <p>
+                    Ученици от различни класове се включиха в работилници и демонстрации, 
+                    свързани с програмиране и логическо мислене, като част от инициативата 
+                    EU Code Week.
+                </p>
+            </div>
+
+            <!-- Статия 3 -->
+            <div class="article-card">
+                <h4>Награден ученик от състезание</h4>
+                <p>
+                    Ученик от нашето училище спечели призово място в национално състезание, 
+                    показвайки изключителни знания и талант в своята област.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================
+         ЗА ЕКИПА
+    ==================================== -->
+    <section class="team">
+        <h3>За екипа</h3>
+        <p>
+            Училищният вестник се подготвя от мотивиран екип от ученици, включително 
+            Деница и Габриела, които работят всеотдайно за създаването на интересни, 
+            полезни и вдъхновяващи материали. Нашата цел е да представяме най-важните 
+            събития, постижения и идеи от училищния живот.
+        </p>
+    </section>
+
+    <!-- ====================================
+         ФУТЪР
+    ==================================== -->
+    <footer>
+        <h4>Контакти</h4>
+        <p>Адрес: гр. Сливен 8800, кв. "Българка"</p>
+        <p>Телефон: 044/66 76 84</p>
+        <p>Имейл: info-2000114@edu.mon.bg</p>
+
+        <br>
+        <h4>Автори</h4>
+        <p>Деница</p>
+        <p>Габриела</p>
+    </footer>
+
+</body>
+</html>
